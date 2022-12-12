@@ -38,7 +38,7 @@
     background-color: rgba(174, 174, 174, 0.509);
     border-radius: 50px;
     font-weight: 800; 
-    left: 50%;
+    top: 50%;
     font-size: 30px;
     transform: translateX(-50%);
     text-align: center;
@@ -46,11 +46,11 @@
 }
 
 .next{
-    top: 5px; 
+    left: 95%; 
 }
 
 .prev{
-    bottom: 5px;
+    left: 5%;
 }
 
 .prev:hover, .next:hover{
