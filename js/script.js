@@ -57,6 +57,23 @@ next.addEventListener('click', function(){
     }
 });
 
+let nextAuto = setInterval(nextImg, 5000)
+
+function nextImg() {
+    console.log ("Da: " + itemActive)
+
+    items[itemActive].classList.remove('active');
+    circles[itemActive].classList.remove('active');
+    itemActive += 1;
+    if (itemActive == imagesArray.length){
+        itemActive = 0
+    }
+    items[itemActive].classList.add('active');
+    circles[itemActive].classList.add('active');
+
+    console.log ("A: " + itemActive)
+}
+
 prev.addEventListener('click', function(){
     
     if (itemActive >= 0){
