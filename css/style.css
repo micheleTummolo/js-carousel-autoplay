@@ -80,3 +80,8 @@
 .circle.active, .circle:hover{
     background-color: rgba(174, 174, 174, 1); 
 }
+
+.button {
+    padding: .2rem .5rem;
+    margin: .5rem;
+}
