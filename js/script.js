@@ -38,6 +38,8 @@ circles[itemActive].classList.add('active');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
 
+let time = 1000
+
 next.addEventListener('click', function(){
 
     if (itemActive <= imagesArray.length){
@@ -53,12 +55,22 @@ next.addEventListener('click', function(){
         circles[itemActive].classList.add('active');
 
         console.log ("A: " + itemActive)
-
     }
 });
 
-let nextAuto = setInterval(nextImg, 5000)
+let nextAuto = setInterval(nextImg, time)
+let stopButton = document.getElementById('stop')
+let playButton = document.getElementById('play')
 
+playButton.addEventListener('click', function() {
+    nextAuto = setInterval(nextImg, time)
+})
+
+stopButton.addEventListener('click', function() {
+    clearInterval(nextAuto)
+})
+
+/* Autoplay function */
 function nextImg() {
     console.log ("Da: " + itemActive)
 
@@ -73,6 +85,7 @@ function nextImg() {
 
     console.log ("A: " + itemActive)
 }
+/* Autoplay function */
 
 prev.addEventListener('click', function(){
     
@@ -90,7 +103,6 @@ prev.addEventListener('click', function(){
         circles[itemActive].classList.add('active');
 
         console.log ("A: " + itemActive)
-
     }
 })
 
